@@ -40,11 +40,9 @@ class CellActor extends Actor with ActorLogging {
       }
 
     case Reset =>
-      log.debug("killin mysef")
-//      context become initial
       context stop self
     case msg =>
-      log.warning("INVALID MESSAGE {} IN STATE STANDBY, state {}, frame {}, killin mysef", msg, state, frame)
+      log.warning("INVALID MESSAGE {} IN STATE STANDBY, state {}, frame {}", msg, state, frame)
       context stop self
   }
 

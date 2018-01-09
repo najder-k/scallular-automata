@@ -23,17 +23,12 @@ trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
   }
 
   implicit object StateFormat extends RootJsonFormat[State] {
-    override def read(json: JsValue): State = json match {
-      case JsString("H") => Healthy
-      case JsString("X") => Infected
-      case JsString("O") => Immune(0) //todo nope
-      case _ => throw DeserializationException("Couldnt deserialize waldek")
-    }
+    override def read(json: JsValue): State = ???
 
     override def write(obj: State): JsValue = obj match {
-      case Healthy => JsString("H")
-      case Infected => JsString("X")
-      case Immune(_) => JsString("O")
+      case Healthy => JsString("S")
+      case Infected => JsString("I")
+      case Immune(_) => JsString("R")
     }
   }
 
