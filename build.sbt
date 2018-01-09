@@ -59,12 +59,12 @@ val akka = Seq(
   "com.typesafe.akka" %% "akka-cluster-tools",
   "com.typesafe.akka" %% "akka-cluster",
   "com.typesafe.akka" %% "akka-cluster-sharding"
-) map (_ % "2.5.4")
+) map (_ % "2.5.8")
 
 val akkaHttp = Seq(
   "com.typesafe.akka" %% "akka-http-core",
   "com.typesafe.akka" %% "akka-http-spray-json"
-) map (_ % "10.0.10")
+) map (_ % "10.0.11")
 
 val logging = Seq(
   "ch.qos.logback" % "logback-classic" % "1.2.3",
@@ -73,7 +73,6 @@ val logging = Seq(
 
 val other = Seq(
   "io.spray" %% "spray-json" % "1.3.4",
-  "com.lihaoyi" %% "fastparse" % "1.0.0",
   "org.scalatest" %% "scalatest" % "3.0.3",
   "org.scalacheck" %% "scalacheck" % "1.13.4"
 )
